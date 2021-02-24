@@ -3,5 +3,7 @@ def main():# I hope this works
 
     print('please show up, please')
 
+    print("From the laptop")
+
 main()
 
