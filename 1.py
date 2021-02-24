@@ -6,5 +6,7 @@ def main():# this is the program that will call the main program
 
     print("For some reason this is not working at all, or at least in the way that I want it to ")
 
+    print("Hope full this shows up")
+
 
 main()
