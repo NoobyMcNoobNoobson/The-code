@@ -13,5 +13,6 @@ def main():
 
 def the_size():
     os.chdir('C:\\Users\\dhaka\\OneDrive\\Desktop\\Semester material\\Data Skills class\\All Homework\\three\\The code\\The-code')
-    data_sample = open('C:\\Users\\dhaka\\OneDrive\\Desktop\\Semester material\\Data Skills class\\All Homework\\three\\The code\\The-code')
+    data_sample = pd.read_csv("surveys.csv")
+    
     
