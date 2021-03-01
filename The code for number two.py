@@ -3,6 +3,11 @@ from pandas import DataFrame
 
 print ('pandas version: ' + pd.__version__)
 
-d = [0,1,3]
+import os
 
-df = DataFrame(data=d)
+def main():
+    the_size()
+
+def the_size():
+    os.chdir('C:\\Users\\dhaka\\OneDrive\\Desktop\\Semester material\\Data Skills class\\All Homework\\three\\The code\\The-code')
+    
