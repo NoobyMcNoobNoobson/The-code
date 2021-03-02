@@ -29,6 +29,7 @@ def mean_plot():
     data_sample = pd.read_csv('surveys.csv') # open the file as needed 
     print('The mean weight by plot for is as follows:-') # this is just to make the printout look a bit more natural
     groupby_plot = data_sample.groupby(['plot_id'])['weight'].mean()
+    print(groupby_plot)
 
 
 main()
