@@ -23,6 +23,12 @@ def mean_hindfoot_lenght():
     groupby_sex = data_sample.groupby(['sex'])['hindfoot_length'].mean() # for some reason this print the data type as well, right now no idea why 
     print(groupby_sex)
 
+def mean():
+    data_sample = pd.read_csv('surveys.csv') # open the file as needed 
+    print('The mean weight by plot for is as follows:-') # this is just to make the printout look a bit more natural
+    groupby_plot = data_sample.groupby(['plot'])['weight'].mean()
+
+
 main()
     
     
