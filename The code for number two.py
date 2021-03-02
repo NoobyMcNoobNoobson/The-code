@@ -12,8 +12,7 @@ def main():
     the_size()
 
 def the_size():
-    os.chdir('C:\\Users\\dhaka\\OneDrive\\Desktop\\Semester material\\Data Skills class\\All Homework\\three\\The-code')
-    data_sample = pd.read_csv("surveys.csv")
+    data_sample = pd.read_csv("surveys.csv") # dear paul, this is one is designed to have the csv files in the corresponding directory.
     print(data_sample.shape)
 
 main()
