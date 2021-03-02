@@ -13,7 +13,7 @@ def main(): # this connects all the other functions togethe
 
 def the_size():
     data_sample = pd.read_csv("surveys.csv") # dear paul, this is one is designed to have the csv files in the corresponding directory.
-    print('The shape of the survrys csv files is listed as follows :- ')
+    print('The shape of the surveys csv files is listed as follows :- ')
     print(data_sample.shape)
 
 main()
