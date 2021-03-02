@@ -10,11 +10,18 @@ from os import path # taking the right module from the library
 
 def main(): # this connects all the other functions togethe
     the_size()
+    mean_hindfoot_lenght()
 
 def the_size():
     data_sample = pd.read_csv("surveys.csv") # dear paul, this is one is designed to have the csv files in the corresponding directory.
     print('The shape of the surveys csv files is listed as follows :- ')
     print(data_sample.shape)
+
+def mean_hindfoot_lenght():
+    data_sample = pd.read_csv('surveys.csv') # open the file as needed 
+    print('The hindfoot lenght for the males and the females are as follows')# this is just to make the printout look a bit more natural 
+    groupby_sex = data_sample.groupby(['sex'])['hindfoot_length'].mean() # for some reason this print the data type as well, right now no idea why 
+    print(groupby_sex)
 
 main()
     
