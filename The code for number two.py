@@ -14,6 +14,7 @@ def main(): # this connects all the other functions togethe
     mean_hindfoot_lenght()
     mean_plot()
     mean_weight_by_sex_in_each_month()
+    males_females_missing_data()
 
 
 def the_size():
@@ -39,6 +40,15 @@ def mean_weight_by_sex_in_each_month():
     groupby_month = data_sample.groupby(['sex','month'])['weight'].mean()
     print(groupby_month)
     #data_sample.plot(groupby_month)
+
+def males_females_missing_data():
+    data_sample = pd.read_csv('surveys.csv')
+    counts_by_sex = data_sample['sex'].value_counts()
+    count_by_null = data_sample['sex'].isna().sum()
+    print('The number of males and females is:')
+    print(counts_by_sex)
+    print('The number of null values is: ')
+    print(count_by_null)
 
 main()
     
