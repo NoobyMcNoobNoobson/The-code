@@ -1,5 +1,6 @@
 import pandas as pd # this imports pandas like we need to
-from pandas import DataFrame # i created a python virtual environment to use run pandas and it worked like a charm, I used tje pipenv command like the tutorial video that I sent you.
+from pandas import DataFrame
+from pandas.core.groupby.groupby import GroupBy # i created a python virtual environment to use run pandas and it worked like a charm, I used tje pipenv command like the tutorial video that I sent you.
 
 print ('pandas version: ' + pd.__version__) # I am using this to make sure I am in the right environment
 
@@ -12,6 +13,7 @@ def main(): # this connects all the other functions togethe
     the_size()
     mean_hindfoot_lenght()
     mean_plot()
+    mean_weight_by_sex_in_each_month()
 
 
 def the_size():
@@ -31,6 +33,12 @@ def mean_plot():
     groupby_plot = data_sample.groupby(['plot_id'])['weight'].mean()
     print(groupby_plot)
 
+def mean_weight_by_sex_in_each_month():
+    data_sample = pd.read_csv('surveys.csv')
+    print('The mean weight of each sec in each month is as follows:-')
+    groupby_month = data_sample.groupby(['sex','month'])['weight'].mean()
+    print(groupby_month)
+    #data_sample.plot(groupby_month)
 
 main()
     
