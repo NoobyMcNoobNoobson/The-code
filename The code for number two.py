@@ -1,7 +1,7 @@
 import pandas as pd # this imports pandas like we need to
 from pandas import DataFrame
 from pandas.core.groupby.groupby import GroupBy # i created a python virtual environment to use run pandas and it worked like a charm, I used tje pipenv command like the tutorial video that I sent you.
-
+import matplotlib.pyplot as plt
 print ('pandas version: ' + pd.__version__) # I am using this to make sure I am in the right environment
 
 #C:\\Users\\dhaka\\OneDrive\\Desktop\\Semester material\\Data Skills class\\All Homework\\three\\The-code
@@ -43,10 +43,9 @@ def mean_weight_by_sex_in_each_month():
     month_dataframe = data_sample.groupby(['month','sex'])
     By_month_and_weight = month_dataframe['weight'].mean()
 
-    #perMW.plot.bar(colormap= 'pink', xlabel='Month and sex', ylabel='Mass (g)',title='Mean Mass of Males and Females per month')
-
-    By_month_and_weight.plot.bar(colormap = 'blue', xlabel = 'Month and sex', ylabel ='Mass (g)', title = 'Mean weight of males and females by month')
-    #data_sample.plot(groupby_month)
+    By_month_and_weight.plot.bar(colormap = 'pink', xlabel = 'Month and sex', ylabel ='Mass (g)', title = 'Mean weight of males and females by month')
+    
+    print(By_month_and_weight.plot)
 
 def males_females_missing_data():
     data_sample = pd.read_csv('surveys.csv')
