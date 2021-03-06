@@ -39,6 +39,13 @@ def mean_weight_by_sex_in_each_month():
     print('The mean weight of each sec in each month is as follows:-')
     groupby_month = data_sample.groupby(['sex','month'])['weight'].mean()
     print(groupby_month)
+
+    month_dataframe = data_sample.groupby(['month','sex'])
+    By_month_and_weight = month_dataframe['weight'].mean()
+
+    #perMW.plot.bar(colormap= 'pink', xlabel='Month and sex', ylabel='Mass (g)',title='Mean Mass of Males and Females per month')
+
+    By_month_and_weight.plot.bar(colormap = 'blue', xlabel = 'Month and sex', ylabel ='Mass (g)', title = 'Mean weight of males and females by month')
     #data_sample.plot(groupby_month)
 
 def males_females_missing_data():
