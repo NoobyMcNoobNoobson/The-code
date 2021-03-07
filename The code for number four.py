@@ -12,7 +12,12 @@ def main():
     filtered_list_of_species = left_merge[left_merge['genus'].isin(['Dipodomys','Sigmodon','Chaetodipus'])]
     #this will write the genus filtered data frame to a csv file
     filtered_list_of_species.to_csv('../filered_list_of_species.csv')
+    print('The shape of the filtered list of species is as follows')
     print(filtered_list_of_species.shape)
+
+    print('The mean weight of each sec in each month is as follows:-')
+    groupby_gender_for_weight = filtered_list_of_species.groupby(['sex','genus'])['weight'].mean()
+    print(groupby_gender_for_weight)
 
 main()
     
