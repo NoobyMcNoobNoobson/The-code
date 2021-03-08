@@ -15,9 +15,9 @@ def main():
 def test_isin():
     data_sample = pd.read_csv('surveys.csv')
     # surveys_df[surveys_df['species_id'].isin([listGoesHere])] NL DM PF PE DS.
-    filtered_list = data_sample[data_sample['species_id'].isin(['NL','DM','PF','DS'])]
+    filtered_list = data_sample[data_sample['species_id'].isin(['NL','DM','PF','DS','PE'])]
     print('The follwoing plots have the given list of species id:-')
-    print(filtered_list)
+    print(filtered_list.shape)
 
 main()
 test_isin()
